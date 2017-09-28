@@ -1,34 +1,23 @@
 {
-  "private": true,
-  "name": "babel-starter-kit",
-  "version": "0.0.0",
-  "description": "A project template for authoring and publishing JavaScript libraries",
-  "homepage": "https://www.kriasoft.com/babel-starter-kit/",
-  "repository": "kriasoft/babel-starter-kit",
-  "author": "Kriasoft <hello@kriasoft.com> (https://www.kriasoft.com)",
-  "contributors": [
-    "Konstantin Tarkus <hello@tarkus.me>",
-    "Vladimir Kutepov <frenzzy.man@gmail.com>"
-  ],
-  "license": "MIT",
+  "name": "torrent-p2p-messaging",
+  "version": "0.1.0",
+  "description": "P2P Messaging using Torrents",
+  "homepage": "https://github.com/sampi/p2p-messages",
+  "repository": "sampi/p2p-messages",
+  "author": "Daniel Spitzer <dsp@tradeshift.com>",
   "keywords": [],
   "main": "index.js",
   "jsnext:main": "index.es.js",
   "babel": {
-    "presets": [
-      "latest",
-      "stage-0"
-    ],
-    "plugins": [
-      "transform-runtime"
-    ]
+    "presets": ["latest", "stage-0"],
+    "plugins": ["transform-runtime"]
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": "airbnb-base"
+    "parser": "babel-eslint"
   },
   "dependencies": {
-    "babel-runtime": "^6.11.6"
+    "babel-runtime": "^6.11.6",
+    "webtorrent": "^0.98.19"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
@@ -54,7 +43,8 @@
     "lint": "eslint src test tools",
     "test": "mocha --compilers js:babel-register",
     "test:watch": "mocha --compilers js:babel-register --reporter min --watch",
-    "test:cover": "babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
+    "test:cover":
+      "babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "build": "node tools/build",
     "prepublish": "npm run build",

@@ -1,0 +1,4 @@
+export default {
+	MAX_CONNECTIONS: 600,
+	CLIENT_SETUP_TIMEOUT: 1000
+};
