@@ -1,5 +1,5 @@
-export setupHost, { sendMessages } from './host';
-export setupCLient from './client';
+export { default as setupHost, sendMessages } from './host';
+export { default as setupClient } from './client';
 
 /*
 // DEMO
