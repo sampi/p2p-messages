@@ -1,9 +1,9 @@
 ```js
-import setupHost, { sendMessages } from './host';
-import setupClient from './client';
+import { setupHost, sendMessages, setupClient } from 'p2p-messaging';
 
 const isHost = window.location.hash === '#1';
 
+// Open URL/#1 in one browser
 if (isHost) {
   const opts = {
     onConnectionRequest: () => true,
@@ -26,7 +26,9 @@ if (isHost) {
     console.log('[HOST] 30seconds have passed, not allowing connections anymore!');
     opts.allowConnections = () => false;
   }, 30000);
-} else {
+}
+// Open the correct URL with the magnetURI as the hash in another window
+else {
   const opts = {
     magnetURI: window.location.hash.substring(1),
     onMessage: data => {
