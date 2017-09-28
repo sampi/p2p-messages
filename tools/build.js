@@ -34,7 +34,7 @@ promise = promise.then(() => del(['dist/*']));
               // exclude: 'node_modules/**',
               runtimeHelpers: true,
               presets: pkg.babel.presets.map(
-                x => (x === 'latest' ? ['latest', { es2015: { modules: true } }] : x)
+                x => (x === 'latest' ? ['latest', { es2015: { modules: false } }] : x)
               )
             })
           )
