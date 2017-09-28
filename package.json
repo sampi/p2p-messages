@@ -1,5 +1,5 @@
 {
-  "name": "torrent-p2p-messaging",
+  "name": "p2p-messaging",
   "version": "0.1.0",
   "description": "P2P Messaging using Torrents",
   "homepage": "https://github.com/sampi/p2p-messages",
